@@ -15,7 +15,7 @@
   "bookBorrows": [],
   "libraryCardApplications": [
     {
-      "id": "21e18a5a6c332cd5",
+      "id": "4fabe0cb03693276",
       "userId": null,
       "firstName": "Abdul",
       "lastName": "Samad",
@@ -25,18 +25,17 @@
       "phone": "03322247950",
       "field": "Computer Science",
       "rollNo": "E-09",
-      "class": "Class 11",
-      "addressStreet": "House No.A-5, Secter 11-B, North Karachi",
-      "addressCity": "Karachi",
+      "class": "Class 12",
       "addressState": "Sindh",
       "addressZip": "75850",
+      "password": "$2b$10$iuRJEcQk/zJSLIh7JYSzaOEN6Z5Pk0ejOxZYQ5efy4rN7hKMS3Pfe",
       "status": "approved",
-      "cardNumber": "CS-E-09-11",
-      "studentId": "GCMN-969194",
+      "cardNumber": "CS-E-09-12",
+      "studentId": "GCMN-284956",
       "issueDate": "2026-01-02",
       "validThrough": "2027-01-02",
-      "createdAt": "2026-01-02T10:38:36.246Z",
-      "updatedAt": "2026-01-02T11:00:32.058Z"
+      "createdAt": "2026-01-02T16:26:52.375Z",
+      "updatedAt": "2026-01-02T16:27:20.524Z"
     }
   ],
   "donations": [],
@@ -45,7 +44,19 @@
   "rareBooks": [],
   "booksDetails": [],
   "events": [],
-  "books": [],
+  "books": [
+    {
+      "id": "54ab4b70f195ec06",
+      "bookName": "stats",
+      "shortIntro": "stats",
+      "description": "xws",
+      "bookImage": "/server/uploads/1767371562176-157977907-stats.jpg",
+      "totalCopies": "11",
+      "availableCopies": "11",
+      "updatedAt": "2026-01-02T16:40:19.234Z",
+      "createdAt": "2026-01-02T16:32:42.180Z"
+    }
+  ],
   "students": [
     {
       "id": "b9ba9bae6bde4dae",
