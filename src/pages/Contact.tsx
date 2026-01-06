@@ -37,9 +37,10 @@ const Contact = () => {
       await apiRequest('POST', '/api/contact-messages', formData);
 
       try {
-        await emailjs.send(
+        // Send Admin Notification
+        const adminPromise = emailjs.send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID,
           {
             from_name: formData.name,
             from_email: formData.email,
@@ -48,6 +49,19 @@ const Contact = () => {
           },
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         );
+
+        // Send Auto-Reply to User
+        const autoReplyPromise = emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID,
+          {
+            to_name: formData.name,
+            to_email: formData.email,
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
+
+        await Promise.all([adminPromise, autoReplyPromise]);
       } catch (emailError) {
         console.error('Email error:', emailError);
         toast({
